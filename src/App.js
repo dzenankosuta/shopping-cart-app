@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <header className="w-full h-24 bg-slate-500 flex justify-end items-center gap-10 sticky top-0 shadow-md shadow-slate-600">
+        <header className="w-full h-24 bg-slate-500 flex justify-end items-center gap-10 sticky top-0 z-50 shadow-md shadow-slate-600">
           <NavLink to="/">
             <img
               src={require("./images/logo.png")}
@@ -38,12 +38,14 @@ function App() {
             CART
           </NavLink>
         </header>
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/items" element={<ItemsPage />}></Route>
-          <Route path="/cart" element={<CartPage />}></Route>
-        </Routes>
-        <footer className="w-full h-14 bg-slate-500 text-xl font-bold cursor-pointer flex justify-center items-center gap-10 fixed bottom-0 ">
+        <main className="mt-6 mb-20 z-10">
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/items" element={<ItemsPage />}></Route>
+            <Route path="/cart" element={<CartPage />}></Route>
+          </Routes>
+        </main>
+        <footer className="w-full h-14 bg-slate-500 text-xl font-bold cursor-pointer flex justify-center items-center gap-10 fixed bottom-0 z-50">
           <h4>
             2022 <em>Copyright</em> Dženan Košuta
           </h4>
