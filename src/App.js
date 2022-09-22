@@ -1,24 +1,26 @@
+import React from "react";
 import "./App.css";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 
 function App() {
   return (
     <>
       <div className="App">
-        <h1 className="text-3xl font-bold">Hello world!</h1>
-      </div>
-      <div className="flex justify-between items-center bg-orange-400 mt-20 mx-auto w-6/12 h-24 rounded-xl px-8">
-        <div className="flex justify-center items-center bg-blue-500 w-16 h-16 text-white font-bold underline rounded-lg">
-          1
-        </div>
-        <div className="flex justify-center items-center bg-red-500 w-16 h-16 text-white font-bold underline rounded-full">
-          2
-        </div>
-        <div className="flex justify-center items-center bg-green-500 w-16 h-16 text-white font-bold underline rounded-2xl">
-          3
-        </div>
-        {/* <button className="bg-blue-400 hover:bg-red-600 text-white py-2 px-4 rounded">
-          Button
-        </button> */}
+        <header class="w-full h-24 bg-slate-500 flex justify-end items-center gap-10 sticky top-0 shadow-md shadow-slate-600">
+          <NavLink>
+            <img
+              src={require("./images/logo.png")}
+              alt="Logo"
+              class="w-32 h-24 absolute left-3 top-0"
+            />
+          </NavLink>
+          <NavLink class="text-slate-200 text-3xl relative top-0 right-10">
+            ITEMS
+          </NavLink>
+          <NavLink class="text-slate-200 text-3xl relative top-0 right-10">
+            CART
+          </NavLink>
+        </header>
       </div>
     </>
   );
