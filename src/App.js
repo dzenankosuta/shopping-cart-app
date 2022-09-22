@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route, Link, NavLink } from "react-router-dom";
+import HomePage from "./components/pages/HomePage/HomePage";
+import ItemsPage from "./components/pages/ItemsPage/ItemsPage";
+import CartPage from "./components/pages/CartPage/CartPage";
 
 function App() {
   let activeStyle = {
@@ -36,20 +39,9 @@ function App() {
           </NavLink>
         </header>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <h1 className="text-3xl font-bold underline">Pocetna stranica</h1>
-            }
-          ></Route>
-          <Route
-            path="/items"
-            element={<h1 className="text-3xl font-bold underline">Artikli</h1>}
-          ></Route>
-          <Route
-            path="/cart"
-            element={<h1 className="text-3xl font-bold underline">Korpa</h1>}
-          ></Route>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/items" element={<ItemsPage />}></Route>
+          <Route path="/cart" element={<CartPage />}></Route>
         </Routes>
         <footer className="w-full h-14 bg-slate-500 text-xl font-bold cursor-pointer flex justify-center items-center gap-10 fixed bottom-0 ">
           <h4>
