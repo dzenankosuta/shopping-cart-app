@@ -1,7 +1,12 @@
 import React from "react";
+import ItemCard from "../../cards/ItemCard/ItemCard";
 
 const ItemsPage = () => {
-  return <h1 className="text-3xl font-bold underline">Artikli</h1>;
+  return (
+    <div className="m-auto w-11/12 grid grid-cols-4 gap-4">
+      <ItemCard />
+    </div>
+  );
 };
 
 export default ItemsPage;
