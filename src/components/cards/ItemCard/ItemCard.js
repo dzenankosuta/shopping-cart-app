@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-hot-toast";
 
 const ItemCard = () => {
   return (
@@ -14,7 +15,10 @@ const ItemCard = () => {
       <p className="absolute bottom-1 left-4 z-20 px-2 cursor-default text-slate-900 bg-orange-300/[.4] rounded-lg">
         Price
       </p>
-      <button className="absolute bottom-5 right-2 z-20 cursor-pointer text-slate-900 bg-orange-400/[.5] p-1 rounded-lg">
+      <button
+        className="absolute bottom-5 right-2 z-20 cursor-pointer text-slate-900 bg-orange-400/[.5] p-1 rounded-lg"
+        onClick={() => toast.success("Successfully added to cart!")}
+      >
         ADD TO CART
       </button>
     </div>

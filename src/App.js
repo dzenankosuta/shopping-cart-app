@@ -4,6 +4,7 @@ import { Routes, Route, Link, NavLink } from "react-router-dom";
 import HomePage from "./components/pages/HomePage/HomePage";
 import ItemsPage from "./components/pages/ItemsPage/ItemsPage";
 import CartPage from "./components/pages/CartPage/CartPage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   let activeStyle = {
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <Toaster position="top-right" reverseOrder={false} />
         <header className="w-full h-24 bg-slate-500 flex justify-end items-center gap-10 sticky top-0 z-50 shadow-md shadow-slate-600">
           <NavLink to="/">
             <img
