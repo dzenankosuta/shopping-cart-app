@@ -1,7 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 
 const Navbar = () => {
+  const { cart } = useContext(ShoppingCartContext);
+  const items = cart.items;
+  const total = cart.total;
+  let visibility = items.length === 0 ? false : true;
+
   let activeStyle = {
     backgroundColor: "rgb(255 237 213)",
   };
@@ -33,6 +40,11 @@ const Navbar = () => {
           alt="Logo"
           className="w-16 h-12"
         />
+        {visibility && (
+          <div className="w-5 h-5 absolute top-0 right-0 bg-orange-400 rounded-full  flex justify-center items-center">
+            <p className="text-base">{items.length}</p>
+          </div>
+        )}
       </NavLink>
     </header>
   );
