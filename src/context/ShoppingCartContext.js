@@ -9,7 +9,7 @@ const ShoppingCartContextProvider = ({ children }) => {
   });
 
   return (
-    <ShoppingCartContext.Provider value={{}}>
+    <ShoppingCartContext.Provider value={{ cart }}>
       {children}
     </ShoppingCartContext.Provider>
   );
