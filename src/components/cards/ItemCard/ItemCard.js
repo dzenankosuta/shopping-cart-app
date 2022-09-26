@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-hot-toast";
 
-const ItemCard = ({ image, name, price, quantity }) => {
+const ItemCard = ({ image, name, price, quantity, onClick }) => {
   return (
     <div className="w-72 h-96 border-solid border-2 border-orange-200 relative rounded-lg">
       <img
@@ -17,7 +17,13 @@ const ItemCard = ({ image, name, price, quantity }) => {
       </p>
       <button
         className="absolute bottom-8 right-2 z-20 cursor-pointer text-slate-900 bg-orange-400/[.5] p-1 rounded-lg"
-        onClick={() => toast.success("Successfully added to cart!")}
+        onClick={() => {
+          quantity > 0
+            ? toast.success("Successfully added to cart!") && onClick()
+            : toast.error(
+                "The selected item is out of stock. Please choose another one."
+              );
+        }}
       >
         ADD TO CART
       </button>
