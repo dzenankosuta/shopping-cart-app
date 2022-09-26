@@ -16,7 +16,10 @@ function App() {
         <div className="App">
           <Toaster position="top-right" reverseOrder={false} />
           <Navbar />
-          <main className="mb-20 z-10" style={{ "min-height": "calc(59vh)" }}>
+          <main
+            className="mt-6 mb-20 relative z-10"
+            style={{ "min-height": "calc(59vh)" }}
+          >
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/items" element={<ItemsPage />}></Route>
