@@ -3,13 +3,12 @@ import { createContext, useState } from "react";
 const ShoppingCartContext = createContext();
 
 const ShoppingCartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState({
-    items: [],
-    total: 0,
-  });
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {};
 
   return (
-    <ShoppingCartContext.Provider value={{ cart }}>
+    <ShoppingCartContext.Provider value={{ cartItems }}>
       {children}
     </ShoppingCartContext.Provider>
   );
