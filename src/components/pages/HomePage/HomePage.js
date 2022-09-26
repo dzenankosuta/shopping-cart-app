@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <>
+      <img
+        src={require("../../../images/homepage.webp")}
+        alt="Home Page BackGround"
+        className="w-full h-full"
+      />
       <h1 className="m-auto w-5/6 text-5xl font-bold  text-center text-slate-800 mt-16 border-2 border-dashed border-orange-300 rounded-xl">
         Welcome to our shopping cart application
       </h1>
