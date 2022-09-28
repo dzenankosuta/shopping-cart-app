@@ -11,11 +11,11 @@ const ItemsPage = () => {
       {products.map((product) => (
         <ItemCard
           key={product.id}
+          id={product.id}
           image={product.imgUrl}
           name={product.name}
           price={product.price}
           currency={product.currency}
-          // quantity={product.quantity}
           onClick={() => addToCart(product)}
         />
       ))}
