@@ -4,10 +4,9 @@ import { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 
 const Navbar = () => {
-  const { cart } = useContext(ShoppingCartContext);
-  const items = cart.items;
-  const total = cart.total;
-  let visibility = items.length === 0 ? false : true;
+  const { cartItems } = useContext(ShoppingCartContext);
+
+  let visibility = cartItems.length === 0 ? false : true;
 
   let activeStyle = {
     backgroundColor: "rgb(255 237 213)",
@@ -42,7 +41,7 @@ const Navbar = () => {
         />
         {visibility && (
           <div className="w-5 h-5 absolute top-0 right-0 bg-orange-400 rounded-full  flex justify-center items-center">
-            <p className="text-base">{items.length}</p>
+            <p className="text-base">{cartItems.length}</p>
           </div>
         )}
       </NavLink>

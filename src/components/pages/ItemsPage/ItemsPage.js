@@ -3,8 +3,7 @@ import ItemCard from "../../cards/ItemCard/ItemCard";
 import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
 
 const ItemsPage = () => {
-  const { cart } = useContext(ShoppingCartContext);
-  const itemsInCart = cart.items;
+  const { cartItems } = useContext(ShoppingCartContext);
   let id = 1;
   let image =
     "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5288e289ec7246dca5c3ae360134ceeb_9366/Arsenal_Condivo_22_Track_Jacket_Blue_HA5284_41_detail.jpg";

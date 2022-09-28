@@ -7,8 +7,9 @@ const ShoppingCartContextProvider = ({ children }) => {
 
   const addToCart = (product) => {};
 
+  const values = { cartItems };
   return (
-    <ShoppingCartContext.Provider value={{ cartItems }}>
+    <ShoppingCartContext.Provider value={values}>
       {children}
     </ShoppingCartContext.Provider>
   );
