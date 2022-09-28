@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-hot-toast";
 
-const ItemCard = ({ image, name, price, quantity, onClick }) => {
+const ItemCard = ({ image, name, price, quantity, currency, onClick }) => {
   return (
     <div className="w-72 h-96 border-solid border-2 border-orange-200 relative rounded-lg">
       <img
@@ -13,7 +13,7 @@ const ItemCard = ({ image, name, price, quantity, onClick }) => {
         {name}
       </p>
       <p className="absolute bottom-1 left-4 z-20 px-2 cursor-default text-slate-900 bg-orange-300/[.4] rounded-lg">
-        $ {price}
+        {price} {currency}
       </p>
       <button
         className="absolute bottom-8 right-2 z-20 cursor-pointer text-slate-900 bg-orange-400/[.5] p-1 rounded-lg"
