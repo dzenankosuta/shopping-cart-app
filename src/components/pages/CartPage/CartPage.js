@@ -40,8 +40,11 @@ const CartPage = () => {
               id={item.id}
             />
           ))}
-          <p className="m-auto w-3/6 text-end text-xl font-bold relative right-9">
-            Total Amount = total
+          <p className="m-auto w-3/6 text-end text-xl font-bold relative right-3">
+            Total Amount =
+            {cartItems
+              .map((item) => item.qtyInCart * item.price)
+              .reduce((prevQty, currQty) => (prevQty += currQty))}
           </p>
         </>
       )}
