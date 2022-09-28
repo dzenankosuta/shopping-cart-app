@@ -18,11 +18,12 @@ const ItemCard = ({ image, name, price, quantity, currency, onClick }) => {
       <button
         className="absolute bottom-8 right-2 z-20 cursor-pointer text-slate-900 bg-orange-400/[.5] p-1 rounded-lg"
         onClick={() => {
-          quantity > 0
-            ? toast.success("Successfully added to cart!") && onClick()
-            : toast.error(
-                "The selected item is out of stock. Please choose another one."
-              );
+          // quantity > 0
+          //   ? toast.success("Successfully added to cart!") && onClick()
+          //   : toast.error(
+          //       "The selected item is out of stock. Please choose another one."
+          //     );
+          toast.success("Successfully added to cart!") && onClick();
         }}
       >
         ADD TO CART

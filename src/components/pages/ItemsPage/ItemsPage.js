@@ -4,8 +4,7 @@ import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
 import products from "../../../common/items.json";
 
 const ItemsPage = () => {
-  const { cartItems } = useContext(ShoppingCartContext);
-  const clickHandler = () => {};
+  const { cartItems, addToCart } = useContext(ShoppingCartContext);
 
   return (
     <div className="m-auto w-11/12 grid grid-cols-4 gap-4">
@@ -17,7 +16,7 @@ const ItemsPage = () => {
           price={product.price}
           currency={product.currency}
           // quantity={product.quantity}
-          onClick={() => clickHandler()}
+          onClick={() => addToCart(product)}
         />
       ))}
     </div>

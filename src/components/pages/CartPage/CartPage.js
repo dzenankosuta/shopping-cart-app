@@ -31,7 +31,15 @@ const CartPage = () => {
         </div>
       ) : (
         <>
-          <CartCard />
+          {cartItems.map((item) => (
+            <CartCard
+              key={item.id}
+              name={item.name}
+              quantity={item.qtyInCart}
+              price={item.price}
+              id={item.id}
+            />
+          ))}
           <p className="m-auto w-3/6 text-end text-xl font-bold relative right-9">
             Total Amount = total
           </p>
