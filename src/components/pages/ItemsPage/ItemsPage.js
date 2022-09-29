@@ -7,7 +7,7 @@ const ItemsPage = () => {
   const { cartItems, addToCart } = useContext(ShoppingCartContext);
 
   return (
-    <div className="m-auto w-11/12 grid grid-cols-4 gap-4">
+    <div className="m-auto w-11/12 grid grid-cols-4 gap-8">
       {products.map((product) => (
         <ItemCard
           key={product.id}
