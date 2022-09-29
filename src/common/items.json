@@ -1,37 +1,58 @@
 [
   {
     "id": 1,
-    "name": "iPhone 14 Pro",
-    "price": 1500,
-    "imgUrl": "https://istyle.rs/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/c/z/czcs_iphone14pro_q422_silver_pdp-images_position-1a_t_1_4_4.jpg",
+    "name": "ARSENAL 22/23 HOME JERSEY",
+    "price": 50,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/450ddf1b5943474fa472ae25009dfed0_9366/ARSENAL_22-23_HOME_JERSEY_Y_Red_HA5339_01_laydown.jpg",
     "currency": "EUR"
   },
   {
     "id": 2,
-    "name": "iPhone 14 Pro Max",
-    "price": 2000,
-    "imgUrl": "https://istyle.rs/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/c/z/czcs_iphone14promax_q422_space-black_pdp-images_position-1a_t_4_7.jpg",
+    "name": "ARSENAL CONDIVO 22 TRAINING TOP",
+    "price": 65,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/32f9a996849147b284c1ae94009678a1_9366/Arsenal_Condivo_22_Training_Top_Blue_HC1252_01_laydown.jpg",
     "currency": "EUR"
   },
   {
     "id": 3,
-    "name": "Macbook Pro 14 M1 Pro 16GB/512GB",
-    "price": 2200,
-    "imgUrl": "https://istyle.hu/media/wysiwyg/HU/landing-pages/preselection/mbp-14-sv.jpeg",
+    "name": "ARSENAL BEANIE",
+    "price": 23,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d8589fb63d02499db805ae7a00cf5273_9366/Arsenal_Beanie_Black_HM9965_01_standard.jpg",
     "currency": "EUR"
   },
   {
     "id": 4,
-    "name": "Macbook Pro 16 M1 Pro -16GB/1TB-",
-    "price": 3200,
-    "imgUrl": "https://istyle.hu/media/wysiwyg/HU/landing-pages/preselection/mbp-16-sg.jpeg",
+    "name": "ARSENAL ANTHEM JACKET",
+    "price": 120,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2db81ab8d14d4817a659ae8c01155d2e_9366/Arsenal_Anthem_Jacket_Blue_HF4030_21_model.jpg",
     "currency": "EUR"
   },
   {
     "id": 5,
-    "name": "Apple Watch Ultra",
-    "price": 1100,
-    "imgUrl": "https://istyle.rs/pub/media/catalog/product/cache/image/400x400/beff4985b56e3afdbeabfc89641a4582/c/z/czcs_watchultra_cellular_q422_49mm_titanium_yellow_ocean_band_pdp_image_position-1_t_2_1.jpg",
+    "name": "ARSENAL TRAVEL HOODIE",
+    "price": 85,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/44d076827f3d4ea08c6bae85012f97bc_9366/Arsenal_Travel_Hoodie_Black_HF4031_01_laydown.jpg",
+    "currency": "EUR"
+  },
+  {
+    "id": 6,
+    "name": "ARSENAL FC 93-94 JERSEY",
+    "price": 85,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/edf2037f434d46479c96adbd0085ce75_9366/Arsenal_FC_93-94_Jersey_Yellow_HK5626_01_laydown.jpg",
+    "currency": "EUR"
+  },
+  {
+    "id": 7,
+    "name": "ARSENAL DNA CAP",
+    "price": 23,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/80b51f1feee344479c1eae760142da56_9366/Arsenal_DNA_Cap_Black_HM9968_01_standard.jpg",
+    "currency": "EUR"
+  },
+  {
+    "id": 8,
+    "name": "ARSENAL TRAVEL BACKPACK",
+    "price": 65,
+    "imgUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c7371783770f41e98afeae9a00a5a2c1_9366/Arsenal_Travel_Backpack_Black_HM9967_01_standard.jpg",
     "currency": "EUR"
   }
 ]

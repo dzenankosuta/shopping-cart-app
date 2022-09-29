@@ -21,6 +21,7 @@ const ShoppingCartContextProvider = ({ children }) => {
         });
       }
     });
+    toast.success("Successfully added to cart!");
   };
 
   const removeFromCart = (id) => {

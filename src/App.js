@@ -18,7 +18,7 @@ function App() {
           <Navbar />
           <main
             className="mt-6 mb-20 relative z-10"
-            style={{ "min-height": "calc(59vh)" }}
+            style={{ minHeight: "calc(65vh)" }}
           >
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
