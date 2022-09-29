@@ -6,6 +6,7 @@ const ShoppingCartContext = createContext();
 
 const ShoppingCartContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const addToCart = (product) => {
     setCartItems((prevItems) => {
@@ -64,6 +65,8 @@ const ShoppingCartContextProvider = ({ children }) => {
     removeFromCart,
     decreaseQuantity,
     increaseQuantity,
+    products,
+    setProducts,
   };
   return (
     <ShoppingCartContext.Provider value={values}>

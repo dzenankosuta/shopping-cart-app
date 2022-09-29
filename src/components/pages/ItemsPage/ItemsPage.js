@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import ItemCard from "../../cards/ItemCard/ItemCard";
 import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
-import products from "../../../common/items.json";
+// import products from "../../../common/items.json";
 
 const ItemsPage = () => {
-  const { cartItems, addToCart } = useContext(ShoppingCartContext);
-
+  const { cartItems, addToCart, products } = useContext(ShoppingCartContext);
   return (
-    <div className="m-auto w-11/12 grid grid-cols-4 gap-8">
+    <div className="m-auto w-11/12 grid grid-cols-4 grid-flow-row gap-8">
       {products.map((product) => (
         <ItemCard
           key={product.id}
