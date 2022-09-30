@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
+import { toast } from "react-hot-toast";
 
 const CartCard = ({ id, name, quantity, price, currency }) => {
-  const { removeFromCart, decreaseQuantity, increaseQuantity } =
+  const { products, removeFromCart, decreaseQuantity, increaseQuantity } =
     useContext(ShoppingCartContext);
   return (
     <div className="m-auto my-1.5 w-3/6 h-14 text-slate-900 text-lg flex justify-between items-center border-2 border-dashed border-orange-300 rounded-xl relative">
@@ -17,8 +18,15 @@ const CartCard = ({ id, name, quantity, price, currency }) => {
           </button>
           <span className="mx-2">{quantity}</span>
           <button
+            // disabled={products.find((item) => item.id === id).quantity === 0}
             className="h-8 w-8 cursor-pointer bg-orange-200 px-1 rounded-lg"
-            onClick={() => increaseQuantity(id)}
+            onClick={() => {
+              if (products.find((item) => item.id === id).quantity === 0) {
+                return toast.error("This product is no longer in stock.");
+              } else {
+                increaseQuantity(id);
+              }
+            }}
           >
             +
           </button>

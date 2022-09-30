@@ -22,6 +22,16 @@ const ShoppingCartContextProvider = ({ children }) => {
         });
       }
     });
+    setProducts((prevProducts) => {
+      return prevProducts.map((artikal) => {
+        if (artikal.id === product.id) {
+          return { ...artikal, quantity: artikal.quantity - 1 };
+        } else {
+          return artikal;
+        }
+      });
+    });
+    console.log(products);
     toast.success("Successfully added to cart!");
   };
 
@@ -44,6 +54,16 @@ const ShoppingCartContextProvider = ({ children }) => {
         }
       });
     });
+    setProducts((prevProducts) => {
+      return prevProducts.map((artikal) => {
+        if (artikal.id === id) {
+          return { ...artikal, quantity: artikal.quantity + 1 };
+        } else {
+          return artikal;
+        }
+      });
+    });
+    console.log(products);
   };
 
   const increaseQuantity = (id) => {
@@ -56,6 +76,16 @@ const ShoppingCartContextProvider = ({ children }) => {
         }
       });
     });
+    setProducts((prevProducts) => {
+      return prevProducts.map((artikal) => {
+        if (artikal.id === id) {
+          return { ...artikal, quantity: artikal.quantity - 1 };
+        } else {
+          return artikal;
+        }
+      });
+    });
+    console.log(products);
   };
 
   const values = {
