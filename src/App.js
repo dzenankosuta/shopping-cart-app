@@ -14,6 +14,7 @@ function App() {
   const { setProducts } = useContext(ShoppingCartContext);
   useEffect(() => {
     setProducts(products);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
@@ -22,7 +23,7 @@ function App() {
         <Navbar />
         <main
           className="mt-6 mb-20 relative z-10"
-          style={{ minHeight: "calc(65vh)" }}
+          style={{ minHeight: "calc(59vh)" }}
         >
           <Routes>
             <Route path="/" element={<HomePage />}></Route>

@@ -12,7 +12,7 @@ const CartPage = () => {
         Your Cart is Empty :(
       </h1> */}
       {cartItems.length === 0 ? (
-        <div className="m-auto my-24 w-4/12 flex flex-col items-center gap-8">
+        <div className="m-auto w-4/12 flex flex-col items-center gap-8">
           <img
             src={require("../../../images/cart_empty.png")}
             alt="Logo"
@@ -26,7 +26,9 @@ const CartPage = () => {
             product and start shopping.
           </p>
           <button className="text-xl text-slate-800 text-center bg-orange-400 p-2 rounded-xl">
-            <Link to="../items">START SHOPPING</Link>
+            <Link to="../items" onClick={() => window.scrollTo(0, 0)}>
+              START SHOPPING
+            </Link>
           </button>
         </div>
       ) : (
