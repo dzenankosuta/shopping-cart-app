@@ -20,6 +20,7 @@ const Navbar = () => {
         to="/"
         className="absolute left-3 text-slate-600 text-3xl p-1 rounded-lg"
         style={classicStyle}
+        onClick={() => window.scrollTo(0, 0)}
       >
         HOMEPAGE
       </NavLink>
@@ -27,12 +28,14 @@ const Navbar = () => {
         to="items"
         className="text-slate-600 text-3xl relative top-0 right-10 p-1 rounded-lg"
         style={({ isActive }) => (isActive ? activeStyle : classicStyle)}
+        onClick={() => window.scrollTo(0, 0)}
       >
         ITEMS
       </NavLink>
       <NavLink
         to="cart"
         className="text-slate-600 text-3xl relative top-0 right-10 p-1 rounded-lg"
+        onClick={() => window.scrollTo(0, 0)}
       >
         <img
           src={require("../../images/logo.png")}

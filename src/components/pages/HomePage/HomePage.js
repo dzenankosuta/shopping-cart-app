@@ -17,6 +17,7 @@ const HomePage = () => {
         <Link
           to="items"
           className="text-3xl p-1 bg-orange-100 rounded-md text-cyan-700"
+          onClick={() => window.scrollTo(0, 0)}
         >
           click me
         </Link>
