@@ -12,6 +12,10 @@ const ItemCard = ({
   buyProduct,
 }) => {
   const { products, cartItems } = useContext(ShoppingCartContext);
+  const discount = false;
+  const classPrice = discount
+    ? "absolute bottom-1 left-1 z-20 px-2 cursor-default text-slate-800 bg-orange-400/[.6] rounded-lg"
+    : "absolute bottom-1 left-1 z-20 px-2 cursor-default text-white bg-slate-800/[.5] rounded-lg";
   return (
     <div className="w-72 h-96 border-solid border-2 border-orange-200 relative rounded-lg">
       <img
@@ -19,12 +23,15 @@ const ItemCard = ({
         alt="item_image"
         className="w-full h-full absolute top-0 z-10 object-cover rounded-lg"
       />
+      <div className="w-16 h-8 absolute top-0 left-0 z-20 bg-orange-400 bg-opacity-60 border-orange-200 rounded-tl-md rounded-br-2xl rounded-tr-sm flex justify-center items-center">
+        -{20}%
+      </div>
       {!cartItems.find((item) => item.id === id) ? (
         <div>
           <p className="absolute bottom-10 left-1 right-1 z-20 px-2 cursor-default text-white bg-slate-800/[.5] rounded-lg">
             {name}
           </p>
-          <p className="absolute bottom-1 left-1 z-20 px-2 cursor-default text-white bg-slate-800/[.5] rounded-lg">
+          <p className={classPrice}>
             {price} {currency}
           </p>
           <p className="absolute bottom-1 left-20 z-20 px-1 cursor-default text-white bg-slate-800/[.5] rounded-lg">
