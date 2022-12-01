@@ -16,7 +16,7 @@ const ItemsPage = () => {
           price={product.price}
           currency={product.currency}
           quantity={product.quantity}
-          onClick={() => addToCart(product)}
+          buyProduct={() => addToCart(product)}
         />
       ))}
     </div>

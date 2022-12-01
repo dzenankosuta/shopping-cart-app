@@ -36,6 +36,7 @@ const ShoppingCartContextProvider = ({ children }) => {
   };
 
   const removeFromCart = (id) => {
+    toast.success("The product was deleted from the cart!");
     setCartItems((prevItems) => {
       return prevItems.filter((item) => item.id !== id);
     });
@@ -44,6 +45,7 @@ const ShoppingCartContextProvider = ({ children }) => {
   const decreaseQuantity = (id) => {
     setCartItems((prevItems) => {
       if (prevItems.find((item) => item.id === id && item.qtyInCart === 1)) {
+        toast.success("The product was deleted from the cart!");
         return prevItems.filter((item) => item.id !== id);
       }
       return prevItems.map((item) => {

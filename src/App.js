@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Toaster position="top-right" reverseOrder={false} />
+        <Toaster position="bottom-right" reverseOrder={false} />
         <Navbar />
         <main
           className="mt-6 mb-20 relative z-10"

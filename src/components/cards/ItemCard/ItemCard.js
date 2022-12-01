@@ -2,7 +2,15 @@ import React, { useContext } from "react";
 import toast from "react-hot-toast";
 import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
 
-const ItemCard = ({ id, image, name, price, currency, quantity, onClick }) => {
+const ItemCard = ({
+  id,
+  image,
+  name,
+  price,
+  currency,
+  quantity,
+  buyProduct,
+}) => {
   const { products, cartItems } = useContext(ShoppingCartContext);
   return (
     <div className="w-72 h-96 border-solid border-2 border-orange-200 relative rounded-lg">
@@ -28,7 +36,7 @@ const ItemCard = ({ id, image, name, price, currency, quantity, onClick }) => {
               if (products.find((item) => item.id === id).quantity === 0) {
                 return toast.error("This product is no longer in stock.");
               } else {
-                return onClick();
+                return buyProduct();
               }
             }}
           >
