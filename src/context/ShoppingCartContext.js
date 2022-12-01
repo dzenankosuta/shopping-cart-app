@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import products from "../common/items.json";
 import { toast } from "react-hot-toast";
 
 const ShoppingCartContext = createContext();
