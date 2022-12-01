@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
-import ItemCard from "../../cards/ItemCard/ItemCard";
-import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
+import React, { useContext } from "react";
+import ItemCard from "../../components/cards/ItemCard/ItemCard";
+import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 // import products from "../../../common/items.json";
 
 const ItemsPage = () => {
-  const { cartItems, addToCart, products } = useContext(ShoppingCartContext);
+  const { addToCart, products } = useContext(ShoppingCartContext);
   return (
     <div className="m-auto w-11/12 grid grid-cols-4 grid-flow-row gap-8">
       {products.map((product) => (

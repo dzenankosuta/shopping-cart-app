@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./components/pages/HomePage/HomePage";
-import ItemsPage from "./components/pages/ItemsPage/ItemsPage";
-import CartPage from "./components/pages/CartPage/CartPage";
+import HomePage from "./pages/HomePage/HomePage";
+import ItemsPage from "./pages/ItemsPage/ItemsPage";
+import CartPage from "./pages/CartPage/CartPage";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";

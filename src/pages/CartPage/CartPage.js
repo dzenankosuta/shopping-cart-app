@@ -1,7 +1,7 @@
 import React from "react";
-import CartCard from "../../cards/CartCard/CartCard";
+import CartCard from "../../components/cards/CartCard/CartCard";
 import { useContext } from "react";
-import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
+import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
 
 const CartPage = () => {
@@ -14,7 +14,7 @@ const CartPage = () => {
       {cartItems.length === 0 ? (
         <div className="m-auto w-4/12 flex flex-col items-center gap-8">
           <img
-            src={require("../../../images/cart_empty.png")}
+            src={require("../../images/cart_empty.png")}
             alt="Logo"
             className="w-24 h-18"
           />

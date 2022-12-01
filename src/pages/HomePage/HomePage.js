@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
       <img
-        src={require("../../../images/homepage.webp")}
+        src={require("../../images/homepage.webp")}
         alt="Home Page BackGround"
         className="w-full h-full relative -top-6"
       />
