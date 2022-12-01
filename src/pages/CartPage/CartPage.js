@@ -14,7 +14,7 @@ const CartPage = () => {
       {cartItems.length === 0 ? (
         <div className="m-auto w-4/12 flex flex-col items-center gap-8">
           <img
-            src={require("../../images/cart_empty.png")}
+            src={require("../../assets/cart_empty.png")}
             alt="Logo"
             className="w-24 h-18"
           />

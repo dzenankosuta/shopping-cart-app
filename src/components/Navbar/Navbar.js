@@ -38,7 +38,7 @@ const Navbar = () => {
         onClick={() => window.scrollTo(0, 0)}
       >
         <img
-          src={require("../../images/logo.png")}
+          src={require("../../assets/logo.png")}
           alt="Logo"
           className="w-16 h-12"
         />
