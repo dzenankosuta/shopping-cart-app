@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import ItemCard from "../../components/cards/ItemCard/ItemCard";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 // import products from "../../../common/items.json";
+import { useSelector } from "react-redux";
+import { actions } from "../../store";
 
 const ItemsPage = () => {
   const { addToCart, products } = useContext(ShoppingCartContext);
+  const productss = useSelector((state) => state.products);
   return (
     <div className="m-auto w-11/12 grid grid-cols-4 grid-flow-row gap-8">
-      {products.map((product) => (
+      {productss.map((product) => (
         <ItemCard
           key={product.id}
           id={product.id}
@@ -17,6 +20,8 @@ const ItemsPage = () => {
           currency={product.currency}
           quantity={product.quantity}
           buyProduct={() => addToCart(product)}
+          discount={product.discount}
+          percent={product.percent}
         />
       ))}
     </div>
