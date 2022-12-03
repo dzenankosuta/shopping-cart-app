@@ -35,7 +35,7 @@ const ItemCard = ({
             {name}
           </p>
           <p className={classPrice}>
-            {price} {currency}
+            {Math.floor((price * (100 - percent)) / 100)} {currency}
           </p>
           <p className="absolute bottom-1 left-20 z-20 px-1 cursor-default text-white bg-slate-800/[.5] rounded-lg">
             {quantity} remains
