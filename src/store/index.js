@@ -1,5 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import products from "../common/items.json";
+import { toast } from "react-hot-toast";
 
 const discountSlice = createSlice({
   name: "discount",
@@ -12,8 +13,31 @@ const discountSlice = createSlice({
         percent: discount === false ? 0 : 30,
       };
     }),
+    cartItems: [],
   },
-  reducers: {},
+  reducers: {
+    addToCart(state, action) {
+      if (!state.cartItems.find((item) => item.id === action.payload.id)) {
+        state.cartItems.push({ ...action.payload, qtyInCart: 1 });
+      } else {
+        state.cartItems = state.cartItems.map((item) => {
+          if (item.id === action.payload.id) {
+            return { ...item, qtyInCart: item.qtyInCart + 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+      state.products = state.products.map((artikal) => {
+        if (artikal.id === action.payload.id) {
+          return { ...artikal, quantity: artikal.quantity - 1 };
+        } else {
+          return artikal;
+        }
+      });
+      toast.success("Successfully added to cart!");
+    },
+  },
 });
 
 export const actions = discountSlice.actions;

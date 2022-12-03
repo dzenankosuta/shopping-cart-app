@@ -3,9 +3,11 @@ import CartCard from "../../components/cards/CartCard/CartCard";
 import { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const CartPage = () => {
-  const { cartItems } = useContext(ShoppingCartContext);
+  // const { cartItems } = useContext(ShoppingCartContext);
+  const cartItems = useSelector((state) => state.cartItems);
   return (
     <>
       {/* <h1 className="text-3xl text-center text-slate-800 font-bold underline">

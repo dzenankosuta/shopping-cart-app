@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
 import { toast } from "react-hot-toast";
+import { useSelector } from "react-redux";
 
 const CartCard = ({ id, name, quantity, price, currency }) => {
-  const { products, removeFromCart, decreaseQuantity, increaseQuantity } =
+  const { removeFromCart, decreaseQuantity, increaseQuantity } =
     useContext(ShoppingCartContext);
+  const products = useSelector((state) => state.products);
   return (
     <div className="m-auto my-1.5 w-3/6 h-14 text-slate-900 text-lg flex justify-between items-center border-2 border-dashed border-orange-300 rounded-xl relative">
       <p className="px-4">{name}</p>
