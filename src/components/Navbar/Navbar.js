@@ -1,10 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
-import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 
 const Navbar = () => {
-  const { cartItems } = useContext(ShoppingCartContext);
+  const cartItems = useSelector((state) => state.cartItems);
 
   let visibility = cartItems.length === 0 ? false : true;
 

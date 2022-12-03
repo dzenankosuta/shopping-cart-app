@@ -3,7 +3,7 @@ import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
 import { toast } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
-const CartCard = ({ id, name, quantity, price, currency }) => {
+const CartCard = ({ id, name, quantity, price, currency, percent }) => {
   const { removeFromCart, decreaseQuantity, increaseQuantity } =
     useContext(ShoppingCartContext);
   const products = useSelector((state) => state.products);
@@ -33,7 +33,8 @@ const CartCard = ({ id, name, quantity, price, currency }) => {
             +
           </button>
         </span>
-        * {price} {currency} = {quantity * price} {currency}
+        * {Math.floor((price * (100 - percent)) / 100)} {currency} ={" "}
+        {quantity * Math.floor((price * (100 - percent)) / 100)} {currency}
       </p>
       <button
         className="h-8 cursor-pointer bg-orange-300 px-1 rounded-lg absolute -right-20"
