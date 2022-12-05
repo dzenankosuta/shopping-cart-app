@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import toast from "react-hot-toast";
-import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
+import { useSelector } from "react-redux";
 
 const ItemCard = ({
   id,
@@ -13,7 +13,8 @@ const ItemCard = ({
   discount,
   percent,
 }) => {
-  const { products, cartItems } = useContext(ShoppingCartContext);
+  const products = useSelector((state) => state.products);
+  const cartItems = useSelector((state) => state.cartItems);
   const classPrice = discount
     ? "absolute bottom-1 left-1 z-20 px-2 cursor-default text-slate-800 bg-orange-400/[.6] rounded-lg"
     : "absolute bottom-1 left-1 z-20 px-2 cursor-default text-white bg-slate-800/[.5] rounded-lg";

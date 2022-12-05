@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
-import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
+import React from "react";
 import { toast } from "react-hot-toast";
 import { useSelector, useDispatch } from "react-redux";
 import { actions } from "../../../store";
 
 const CartCard = ({ id, name, quantity, price, currency, percent }) => {
-  const { increaseQuantity } = useContext(ShoppingCartContext);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
   return (
@@ -27,7 +25,7 @@ const CartCard = ({ id, name, quantity, price, currency, percent }) => {
               if (products.find((item) => item.id === id).quantity === 0) {
                 return toast.error("This product is no longer in stock.");
               } else {
-                increaseQuantity(id);
+                return dispatch(actions.increaseQuantity(id));
               }
             }}
           >

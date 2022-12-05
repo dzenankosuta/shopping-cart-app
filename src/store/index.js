@@ -64,7 +64,23 @@ const discountSlice = createSlice({
       }
       state.products = state.products.map((artikal) => {
         if (artikal.id === action.payload) {
-          return { ...artikal, qtyInCart: artikal.qtyInCart + 1 };
+          return { ...artikal, quantity: artikal.quantity + 1 };
+        } else {
+          return artikal;
+        }
+      });
+    },
+    increaseQuantity(state, action) {
+      state.cartItems = state.cartItems.map((item) => {
+        if (item.id === action.payload) {
+          return { ...item, qtyInCart: item.qtyInCart + 1 };
+        } else {
+          return item;
+        }
+      });
+      state.products = state.products.map((artikal) => {
+        if (artikal.id === action.payload) {
+          return { ...artikal, quantity: artikal.quantity - 1 };
         } else {
           return artikal;
         }
