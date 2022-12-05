@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
@@ -7,23 +7,23 @@ import CartPage from "./pages/CartPage/CartPage";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import { ShoppingCartContext } from "./context/ShoppingCartContext";
-import products from "./common/items.json";
+// import { ShoppingCartContext } from "./context/ShoppingCartContext";
+// import products from "./common/items.json";
 
 function App() {
-  const { setProducts } = useContext(ShoppingCartContext);
-  useEffect(() => {
-    setProducts(products);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // const { setProducts } = useContext(ShoppingCartContext);
+  // useEffect(() => {
+  //   setProducts(products);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
   return (
     <>
       <div className="App">
         <Toaster position="bottom-right" reverseOrder={false} />
         <Navbar />
         <main
-          className="mt-6 mb-20 relative z-10"
-          style={{ minHeight: "calc(59vh)" }}
+          className="pt-6 pb-20 relative z-10"
+          style={{ minHeight: "76vh" }}
         >
           <Routes>
             <Route path="/" element={<HomePage />}></Route>

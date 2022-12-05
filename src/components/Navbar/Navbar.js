@@ -14,7 +14,10 @@ const Navbar = () => {
     backgroundColor: "rgb(203 213 225)",
   };
   return (
-    <header className="w-full h-24 bg-slate-500 flex justify-end items-center gap-10 sticky top-0 z-50 shadow-md shadow-slate-600">
+    <header
+      style={{ height: "15vh" }}
+      className="w-full bg-slate-500 flex justify-end items-center gap-10 sticky top-0 z-50 shadow-md shadow-slate-600"
+    >
       <NavLink
         to="/"
         className="absolute left-3 text-slate-600 text-3xl p-1 rounded-lg"
