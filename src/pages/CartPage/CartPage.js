@@ -1,7 +1,5 @@
 import React from "react";
 import CartCard from "../../components/cards/CartCard/CartCard";
-import { useContext } from "react";
-import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 

@@ -5,8 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { actions } from "../../../store";
 
 const CartCard = ({ id, name, quantity, price, currency, percent }) => {
-  const { decreaseQuantity, increaseQuantity } =
-    useContext(ShoppingCartContext);
+  const { increaseQuantity } = useContext(ShoppingCartContext);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
   return (
@@ -16,7 +15,7 @@ const CartCard = ({ id, name, quantity, price, currency, percent }) => {
         <span className="absolute right-48">
           <button
             className="h-8 w-8 cursor-pointer bg-orange-200 px-1 rounded-lg"
-            onClick={() => decreaseQuantity(id)}
+            onClick={() => dispatch(actions.decreaseQuantity(id))}
           >
             -
           </button>

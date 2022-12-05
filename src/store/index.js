@@ -43,6 +43,33 @@ const discountSlice = createSlice({
       );
       toast.success("The product was deleted from the cart!");
     },
+    decreaseQuantity(state, action) {
+      if (
+        state.cartItems.find(
+          (item) => item.id === action.payload && item.qtyInCart === 1
+        )
+      ) {
+        state.cartItems = state.cartItems.filter(
+          (item) => item.id !== action.payload
+        );
+        toast.success("The product was deleted from the cart!");
+      } else {
+        state.cartItems = state.cartItems.map((item) => {
+          if (item.id === action.payload) {
+            return { ...item, qtyInCart: item.qtyInCart - 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+      state.products = state.products.map((artikal) => {
+        if (artikal.id === action.payload) {
+          return { ...artikal, qtyInCart: artikal.qtyInCart + 1 };
+        } else {
+          return artikal;
+        }
+      });
+    },
   },
 });
 
