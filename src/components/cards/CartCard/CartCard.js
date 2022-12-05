@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../../context/ShoppingCartContext";
 import { toast } from "react-hot-toast";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { actions } from "../../../store";
 
 const CartCard = ({ id, name, quantity, price, currency, percent }) => {
-  const { removeFromCart, decreaseQuantity, increaseQuantity } =
+  const { decreaseQuantity, increaseQuantity } =
     useContext(ShoppingCartContext);
+  const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
   return (
     <div className="m-auto my-1.5 w-3/6 h-14 text-slate-900 text-lg flex justify-between items-center border-2 border-dashed border-orange-300 rounded-xl relative">
@@ -38,7 +40,7 @@ const CartCard = ({ id, name, quantity, price, currency, percent }) => {
       </p>
       <button
         className="h-8 cursor-pointer bg-orange-300 px-1 rounded-lg absolute -right-20"
-        onClick={() => removeFromCart(id)}
+        onClick={() => dispatch(actions.removeFromCart(id))}
       >
         DELETE
       </button>

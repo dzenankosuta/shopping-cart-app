@@ -37,6 +37,12 @@ const discountSlice = createSlice({
       });
       toast.success("Successfully added to cart!");
     },
+    removeFromCart(state, action) {
+      state.cartItems = state.cartItems.filter(
+        (item) => item.id !== action.payload
+      );
+      toast.success("The product was deleted from the cart!");
+    },
   },
 });
 
