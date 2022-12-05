@@ -38,6 +38,19 @@ const discountSlice = createSlice({
       toast.success("Successfully added to cart!");
     },
     removeFromCart(state, action) {
+      state.products = state.products.map((artikal) => {
+        if (artikal.id === action.payload) {
+          return {
+            ...artikal,
+            quantity:
+              artikal.quantity +
+                state.cartItems.find((item) => item.id === action.payload)
+                  .qtyInCart || 0,
+          };
+        } else {
+          return artikal;
+        }
+      });
       state.cartItems = state.cartItems.filter(
         (item) => item.id !== action.payload
       );
