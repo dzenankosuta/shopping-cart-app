@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import ItemCard from "../../components/cards/ItemCard/ItemCard";
-import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 // import products from "../../../common/items.json";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../store";
